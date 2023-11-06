@@ -31,6 +31,19 @@
 			text-align: center;
 		}
 	</style>
+	<script>
+		function judgeisnull() {
+			let a = document.getElementById('pass')
+			if (a.value === null || a.value === undefined || a.value === '') {
+				alert('不能为空')
+				return false
+			}
+			else {
+				alert('ok')
+				return true
+			}
+		}
+	</script>
 </head>
 
 <body>
@@ -38,13 +51,15 @@
 	<div id="secondediv">
 		<ul>
 			<li>
-				<a href="https://www.jd.com/" target="_blank">我的blog
-				</a>
+				<form action="first.html">
+					<input id='pass' name='word' type="password">
+					<button onclick="return judgeisnull()">点我跳出alert</button>
+				</form>
 			</li>
-			<li>
-				<a href="first.html" target="'_blank">test</a>
-			</li>
+
 		</ul>
+
+
 	</div>
 </body>
 

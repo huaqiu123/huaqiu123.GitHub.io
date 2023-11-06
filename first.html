@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>06_浮动布局小练习</title>
+	<script src="test.js"></script>
 	<style>
 		* {
 			margin: 0;
@@ -105,14 +106,26 @@
 			margin-top: 10px;
 			line-height: 60px;
 		}
+
+		.center {
+			position: relative;
+			left: 20px;
+		}
 	</style>
+	<script>
+		function ffff() {
+			alert('mohpajapfj')
+		}
+	</script>
 </head>
 
 <body>
 	<div class="container">
 		<!-- 头部 -->
 		<div class="page-header clearfix">
-			<div class="logo leftfix">logo</div>
+			<div class="logo leftfix">logo
+				<button class="leftfix center" onclick="ffff()">dianwo</button>
+			</div>
 			<div class="banner1 leftfix">banner1</div>
 			<div class="banner2 leftfix">banner2</div>
 		</div>
