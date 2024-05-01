@@ -20,19 +20,23 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="A Survey of Table Reasoning with Large Language Models[v1] Tue, 13 Feb 2024 07:17:52 UTC (380 KB) Table reasoning, which aims to generate the corresponding answer to the question following the user re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2024/04/27/hello-world/index.html">
+<meta property="og:title" content="表格推理">
+<meta property="og:url" content="http://example.com/2024/05/01/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="A Survey of Table Reasoning with Large Language Models[v1] Tue, 13 Feb 2024 07:17:52 UTC (380 KB) Table reasoning, which aims to generate the corresponding answer to the question following the user re">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-04-27T15:02:03.741Z">
-<meta property="article:modified_time" content="2024-04-27T15:02:03.741Z">
+<meta property="og:image" content="http://example.com/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure1.png">
+<meta property="og:image" content="http://example.com/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure2.png">
+<meta property="article:published_time" content="2024-05-01T11:16:46.000Z">
+<meta property="article:modified_time" content="2024-05-01T11:45:01.577Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="表格推理">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure1.png">
 
-<link rel="canonical" href="http://example.com/2024/04/27/hello-world/">
+<link rel="canonical" href="http://example.com/2024/05/01/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86/">
 
 
 <script id="page-configurations">
@@ -45,7 +49,7 @@
   };
 </script>
 
-  <title>Hello World | Hexo</title>
+  <title>表格推理 | Hexo</title>
   
 
 
@@ -180,7 +184,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/27/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -193,7 +197,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          表格推理
         </h1>
 
         <div class="post-meta">
@@ -202,8 +206,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2024-04-27 23:02:03" itemprop="dateCreated datePublished" datetime="2024-04-27T23:02:03+08:00">2024-04-27</time>
+              <time title="Created: 2024-05-01 19:16:46 / Modified: 19:45:01" itemprop="dateCreated datePublished" datetime="2024-05-01T19:16:46+08:00">2024-05-01</time>
             </span>
 
           
@@ -217,19 +222,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="A-Survey-of-Table-Reasoning-with-Large-Language-Models"><a href="#A-Survey-of-Table-Reasoning-with-Large-Language-Models" class="headerlink" title="A Survey of Table Reasoning with Large Language Models"></a>A Survey of Table Reasoning with Large Language Models</h1><p>[v1] Tue, 13 Feb 2024 07:17:52 UTC (380 KB)</p>
+<p>Table reasoning, which aims to generate the corresponding answer to the question following the user requirement according to the provided table, and optionally a text description of the table, effectively improving the efficiency of obtaining information. Recently, using Large Language Models (LLMs) has become the mainstream method for table reasoning, because it not only significantly reduces the annotation cost but also exceeds the performance of previous methods. However, existing research still lacks a summary of LLM-based table reasoning works. Due to the existing lack of research, questions about which techniques can improve table reasoning performance in the era of LLMs, why LLMs excel at table reasoning, and how to enhance table reasoning abilities in the future, remain largely unexplored. This gap significantly limits progress in research. To answer the above questions and advance table reasoning research with LLMs, we present this survey to analyze existing research, inspiring future work. In this paper, we analyze the mainstream techniques used to improve table reasoning performance in the LLM era1, and the advantages of LLMs compared to pre-LLMs for solving table reasoning. We provide research directions from both the improvement of existing methods and the expansion of practical applications to inspire future research.</p>
+<p>表格推理，旨在根据提供的表格，以及可选的表格的文字描述，根据用户需求生成对应问题的答案，有效提高获取信息的效率。最近，使用大型语言模型（LLM）已成为表推理的主流方法，因为它不仅显着降低了注释成本，而且超过了以前方法的性能。然而，现有研究仍缺乏对基于LLM的表推理工作的总结。由于目前研究的缺乏，LLM时代哪些技术可以提高表推理性能、LLM为什么擅长表推理以及未来如何增强表推理能力等问题仍然很大程度上没有被探索。这一差距极大地限制了研究的进展。为了回答上述问题并推进LLM的表格推理研究，我们提出这项调查来分析现有研究，启发未来的工作。在本文中，我们分析了 LLM 时代用于提高表推理性能的主流技术，以及 LLM 与 pre-LLM 相比在解决表推理方面的优势。我们从改进现有方法和扩展实际应用两个方面提供研究方向，以启发未来的研究。</p>
+<h3 id="表格推理问题介绍"><a href="#表格推理问题介绍" class="headerlink" title="表格推理问题介绍"></a>表格推理问题介绍</h3><p><img src="/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure1.png" alt="这是图片" title="figure1"></p>
+<p>表推理的研究阶段</p>
+<p>rule-based, neural network-based, and pretrained language model-based [Jin et al., 2022], which we call the pre-LLM era. Recent research [Zhao et al., 2023b] has shown that Large Language Models (LLMs) exhibit compelling performance across NLP tasks, in particular, dramatically reducing annotation requirements, which we call the LLM era.</p>
+<p>rule-based -&gt; neural network-based -&gt;  pretrained language model-based  -&gt;LLM era</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A[&quot;rule-based &quot;] --&gt; B[&quot;neural network-based&quot;] --&gt;C[&quot;pretrained language&quot;] --&gt; D[&#x27;LLM era&#x27;]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>本文关注点</p>
+<ol>
+<li><p>What techniques can improve table reasoning performance in the LLM era; 2. Why LLMs excel at table reasoning; 3. How to enhance table reasoning ability in the future.</p>
+</li>
+<li><p>LLM时代有哪些技术可以提高表格推理性能； 2. 为什么LLM擅长表格推理； 3、以后如何增强表格推理能力。</p>
+</li>
+</ol>
+<p>表推理技术<br><img src="/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure2.png" alt="这是图片" title="figure2"></p>
+<p>关于第一个主题，为了更好地适应LLM时代的表推理研究，我们在§3中介绍了LLM时代表推理的主流技术和详细方法。具体来说，我们根据现有作品所使用的不同技术对它们进行分类，并分别对其进行详细介绍。</p>
+<p>考虑第二个主题，我们探讨了为什么LLM在第 4 节中的表格推理任务中表现出优异的性能。我们比较了 pre-LLM 和 LLM 在不同基准上的最佳表现，并证明 LLM 在表推理任务中始终优于 pre-LLM。然后，我们基于该任务的两个固有挑战，讨论了法学硕士在解决表推理任务方面的优势。</p>
+<p>关于第三个主题，我们在第 5 节中讨论了表格推理的潜在未来方向。为了促进表推理研究，更好地将表推理应用于现实场景，我们分别分析如何进一步提高表推理性能并探索如何将表推理应用于实际应用。</p>
+<h2 id="Benchmarks"><a href="#Benchmarks" class="headerlink" title="Benchmarks"></a>Benchmarks</h2><p>related resources in</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> zhxlia&#x2F;Awesome-TableReasoning-LLM-Survey</p>
+<p>表 QA：表 QA 任务是根据表回答问题 [Pasupat 和 Liang，2015]。 WikiTableQuestions [Pasupat 和 Liang，2015] 充当表 QA 任务的初始基准，该任务具有开放域表并伴有复杂的问题。 </p>
+<p> 表事实验证：表事实验证任务旨在根据证据表验证文本假设是否成立或反驳[Chen et al., 2020]。 TabFact [Chen et al., 2020]作为表事实验证任务中的第一个基准，具有大规模跨域表数据和复杂推理要求的特点。 </p>
+<p> 表到文本：表到文本任务是通过表格生成与给定问题相对应的自然语言描述[Nan et al., 2022]。与仅生成多个跨度的表格 QA 任务不同，表格到文本要求答案为一段。 FeTaQA [Nan et al., 2022] 要求模型利用大规模、高质量的数据生成问题的自由格式答案。 </p>
+<p> 文本到SQL：文本到SQL 旨在将数据库下的文本问题转换为可执行的结构化查询语言(SQL)。 Spider [Yu et al., 2018] 是第一个针对文本到 SQL 任务的多域、多表基准测试。</p>
 
     </div>
 
@@ -238,17 +257,20 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86/" rel="tag"># 表格推理</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2024/04/30/fisrt-blog/" rel="next" title="fisrt blog">
-      fisrt blog <i class="fa fa-chevron-right"></i>
+    <a href="/2024/04/30/fisrt-blog/" rel="prev" title="fisrt blog">
+      <i class="fa fa-chevron-left"></i> fisrt blog
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -307,7 +329,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-Survey-of-Table-Reasoning-with-Large-Language-Models"><span class="nav-number">1.</span> <span class="nav-text">A Survey of Table Reasoning with Large Language Models</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E9%97%AE%E9%A2%98%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.0.1.</span> <span class="nav-text">表格推理问题介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Benchmarks"><span class="nav-number">1.1.</span> <span class="nav-text">Benchmarks</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
