@@ -27,14 +27,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="A Survey of Table Reasoning with Large Language Models[v1] Tue, 13 Feb 2024 07:17:52 UTC (380 KB) Table reasoning, which aims to generate the corresponding answer to the question following the user re">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images%5C%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure1.png">
-<meta property="og:image" content="http://example.com/images%5C%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure2.png">
+<meta property="og:image" content="http://example.com/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/figure1.png">
+<meta property="og:image" content="http://example.com/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/figure2.png">
 <meta property="article:published_time" content="2024-05-01T11:16:46.000Z">
-<meta property="article:modified_time" content="2024-05-01T11:54:11.022Z">
+<meta property="article:modified_time" content="2024-05-01T11:55:59.156Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="表格推理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images%5C%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure1.png">
+<meta name="twitter:image" content="http://example.com/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/figure1.png">
 
 <link rel="canonical" href="http://example.com/2024/05/01/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86/">
 
@@ -208,7 +208,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2024-05-01 19:16:46 / Modified: 19:54:11" itemprop="dateCreated datePublished" datetime="2024-05-01T19:16:46+08:00">2024-05-01</time>
+              <time title="Created: 2024-05-01 19:16:46 / Modified: 19:55:59" itemprop="dateCreated datePublished" datetime="2024-05-01T19:16:46+08:00">2024-05-01</time>
             </span>
 
           
@@ -225,7 +225,7 @@
         <h1 id="A-Survey-of-Table-Reasoning-with-Large-Language-Models"><a href="#A-Survey-of-Table-Reasoning-with-Large-Language-Models" class="headerlink" title="A Survey of Table Reasoning with Large Language Models"></a>A Survey of Table Reasoning with Large Language Models</h1><p>[v1] Tue, 13 Feb 2024 07:17:52 UTC (380 KB)</p>
 <p>Table reasoning, which aims to generate the corresponding answer to the question following the user requirement according to the provided table, and optionally a text description of the table, effectively improving the efficiency of obtaining information. Recently, using Large Language Models (LLMs) has become the mainstream method for table reasoning, because it not only significantly reduces the annotation cost but also exceeds the performance of previous methods. However, existing research still lacks a summary of LLM-based table reasoning works. Due to the existing lack of research, questions about which techniques can improve table reasoning performance in the era of LLMs, why LLMs excel at table reasoning, and how to enhance table reasoning abilities in the future, remain largely unexplored. This gap significantly limits progress in research. To answer the above questions and advance table reasoning research with LLMs, we present this survey to analyze existing research, inspiring future work. In this paper, we analyze the mainstream techniques used to improve table reasoning performance in the LLM era1, and the advantages of LLMs compared to pre-LLMs for solving table reasoning. We provide research directions from both the improvement of existing methods and the expansion of practical applications to inspire future research.</p>
 <p>表格推理，旨在根据提供的表格，以及可选的表格的文字描述，根据用户需求生成对应问题的答案，有效提高获取信息的效率。最近，使用大型语言模型（LLM）已成为表推理的主流方法，因为它不仅显着降低了注释成本，而且超过了以前方法的性能。然而，现有研究仍缺乏对基于LLM的表推理工作的总结。由于目前研究的缺乏，LLM时代哪些技术可以提高表推理性能、LLM为什么擅长表推理以及未来如何增强表推理能力等问题仍然很大程度上没有被探索。这一差距极大地限制了研究的进展。为了回答上述问题并推进LLM的表格推理研究，我们提出这项调查来分析现有研究，启发未来的工作。在本文中，我们分析了 LLM 时代用于提高表推理性能的主流技术，以及 LLM 与 pre-LLM 相比在解决表推理方面的优势。我们从改进现有方法和扩展实际应用两个方面提供研究方向，以启发未来的研究。</p>
-<h3 id="表格推理问题介绍"><a href="#表格推理问题介绍" class="headerlink" title="表格推理问题介绍"></a>表格推理问题介绍</h3><p><img src="/images%5C%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure1.png" alt="这是图片" title="figure1"></p>
+<h3 id="表格推理问题介绍"><a href="#表格推理问题介绍" class="headerlink" title="表格推理问题介绍"></a>表格推理问题介绍</h3><p><img src="/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/figure1.png" alt="这是图片" title="figure1"></p>
 <p>表推理的研究阶段</p>
 <p>rule-based, neural network-based, and pretrained language model-based [Jin et al., 2022], which we call the pre-LLM era. Recent research [Zhao et al., 2023b] has shown that Large Language Models (LLMs) exhibit compelling performance across NLP tasks, in particular, dramatically reducing annotation requirements, which we call the LLM era.</p>
 <p>rule-based -&gt; neural network-based -&gt;  pretrained language model-based  -&gt;LLM era</p>
@@ -239,7 +239,7 @@
 <li><p>LLM时代有哪些技术可以提高表格推理性能； 2. 为什么LLM擅长表格推理； 3、以后如何增强表格推理能力。</p>
 </li>
 </ol>
-<p>表推理技术<br><img src="/images%5C%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F%5Cfigure2.png" alt="这是图片" title="figure2"></p>
+<p>表推理技术<br><img src="/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/figure2.png" alt="这是图片" title="figure2"></p>
 <p>关于第一个主题，为了更好地适应LLM时代的表推理研究，我们在§3中介绍了LLM时代表推理的主流技术和详细方法。具体来说，我们根据现有作品所使用的不同技术对它们进行分类，并分别对其进行详细介绍。</p>
 <p>考虑第二个主题，我们探讨了为什么LLM在第 4 节中的表格推理任务中表现出优异的性能。我们比较了 pre-LLM 和 LLM 在不同基准上的最佳表现，并证明 LLM 在表推理任务中始终优于 pre-LLM。然后，我们基于该任务的两个固有挑战，讨论了法学硕士在解决表推理任务方面的优势。</p>
 <p>关于第三个主题，我们在第 5 节中讨论了表格推理的潜在未来方向。为了促进表推理研究，更好地将表推理应用于现实场景，我们分别分析如何进一步提高表推理性能并探索如何将表推理应用于实际应用。</p>
