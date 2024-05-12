@@ -20,15 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/categories/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86/index.html">
+  <meta name="description" content="简介大模型有高水平的类比推理能力再现训练数据（零样本评估）或提供的上下文（少样本上下文学习）中出现的线性文本模式。  有点疑惑？？？这是什么意思 然而，最近的研究表明，LLM在需要对多个对象或事实进行推理并进行逻辑推论序列的情况下会失败 ThinkSum: Probabilistic reasoning over sets using large language models摘要：大语言模型（L">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ThinkSum Probabilistic reasoning over sets using large language models">
+<meta property="og:url" content="http://example.com/2024/05/11/ThinkSum-Probabilistic-reasoning-over-sets-using-large-language-models/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="简介大模型有高水平的类比推理能力再现训练数据（零样本评估）或提供的上下文（少样本上下文学习）中出现的线性文本模式。  有点疑惑？？？这是什么意思 然而，最近的研究表明，LLM在需要对多个对象或事实进行推理并进行逻辑推论序列的情况下会失败 ThinkSum: Probabilistic reasoning over sets using large language models摘要：大语言模型（L">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-11T06:14:21.000Z">
+<meta property="article:modified_time" content="2024-05-11T08:24:00.259Z">
 <meta property="article:author" content="Hua Qiu">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/categories/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86/">
+<link rel="canonical" href="http://example.com/2024/05/11/ThinkSum-Probabilistic-reasoning-over-sets-using-large-language-models/">
 
 
 <script id="page-configurations">
@@ -36,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Category: 表格推理 | Hexo</title>
+  <title>ThinkSum Probabilistic reasoning over sets using large language models | Hexo</title>
   
 
 
@@ -125,12 +129,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section">Categories<span class="badge">1</span></a>
+    <a href="/categories/" rel="section">Categories<span class="badge">0</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section">Archives<span class="badge">4</span></a>
+    <a href="/archives/" rel="section">Archives<span class="badge">5</span></a>
 
   </li>
   </ul>
@@ -154,51 +158,80 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">表格推理
-          <small>Category</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/11/ThinkSum-Probabilistic-reasoning-over-sets-using-large-language-models/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+      <meta itemprop="name" content="Hua Qiu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ThinkSum Probabilistic reasoning over sets using large language models
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-05-11 14:14:21 / Modified: 16:24:00" itemprop="dateCreated datePublished" datetime="2024-05-11T14:14:21+08:00">2024-05-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>大模型有高水平的类比推理能力<br><em>再现训练数据（零样本评估）或提供的上下文（少样本上下文学习）中出现的线性文本模式。</em> </p>
+<p>有点疑惑？？？这是什么意思</p>
+<p>然而，最近的研究表明，LLM在需要对多个对象或事实进行推理并进行逻辑推论序列的情况下会失败</p>
+<p>ThinkSum: Probabilistic reasoning over sets using large language models<br>摘要：大语言模型（LLMs）在高级类比推理方面具有很强的能力：在线性文本中再现训练数据中出现的模式（zero-shot评估）或在提供的上下文中出现的模式（few-shot上下文学习）。然而，最近的研究表明，即使是更高级的LLM，在需要对多个对象或事实进行推理并进行逻辑推理序列的场景中也会失败。我们提出了一种两阶段概率推理范式ThinkSum，它以结构化的方式对对象或事实集进行推理。在第一阶段（Think–关联检索），LLM对从提示或辅助模型调用中提取的一组短语进行并行查询。在第二阶段（Sum–概率推断或推理），这些查询的结果被汇总以进行最终预测。我们在LLM评估任务的BIG-bench套件中展示了ThinkSum的可能性和优势，在13个高难度任务中，ThinkSum比使用GPT-family模型的现有技术水平有所提高，通常使用的模型变体要小得多。我们还将ThinkSum与其他针对LLM直接提示的修改建议进行了比较和对比，例如思维链提示的变体。我们的研究结果表明，由于ThinkSum中的概率推理是在调用LLM之外进行的，因此ThinkSum对提示设计的敏感性较低，能够产生更多可解释的预测，并且能够灵活地与潜在变量模型相结合，从LLM中提取结构化知识。总之，我们提出的范式是增强LLM推理能力的一种有前途的方法。<br>关键词：推理增强；两阶段概率推理；检索</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-05-01T20:01:58+08:00"
-              content="2024-05-01">
-          05-01
-        </time>
-      </div>
+      <footer class="post-footer">
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/05/01/LLM-decompose-for-Table-reasoning/" itemprop="url">
-            <span itemprop="name">LLM decompose for Table reasoning</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/05/11/LLM-for-table-reasoning/" rel="prev" title="LLM for table reasoning">
+      <i class="fa fa-chevron-left"></i> LLM for table reasoning
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -251,6 +284,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -266,15 +300,9 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">

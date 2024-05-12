@@ -20,28 +20,36 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="Large Language Models are Versatile Decomposers Decompose Evidence and Questions for Table-based Reasoning  摘要：表格推理： 表格推理要求结合表格和问题，表格是结构化的 原有的方法不能够完成复杂的question，并且不能够大表格 提出步骤：1、首先用LLM去分解表格变为多个小表格 2、用L">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LLM for table reasoning">
+<meta property="og:url" content="http://example.com/2024/05/11/LLM-for-table-reasoning/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Large Language Models are Versatile Decomposers Decompose Evidence and Questions for Table-based Reasoning  摘要：表格推理： 表格推理要求结合表格和问题，表格是结构化的 原有的方法不能够完成复杂的question，并且不能够大表格 提出步骤：1、首先用LLM去分解表格变为多个小表格 2、用L">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/f3.png">
+<meta property="og:image" content="http://example.com/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/prompt.png">
+<meta property="og:image" content="http://example.com/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.png">
+<meta property="article:published_time" content="2024-05-11T03:44:58.000Z">
+<meta property="article:modified_time" content="2024-05-11T08:25:44.968Z">
 <meta property="article:author" content="Hua Qiu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/f3.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2024/05/11/LLM-for-table-reasoning/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Hexo</title>
+  <title>LLM for table reasoning | Hexo</title>
   
 
 
@@ -154,71 +162,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/11/ThinkSum-Probabilistic-reasoning-over-sets-using-large-language-models/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-      <meta itemprop="name" content="Hua Qiu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/11/ThinkSum-Probabilistic-reasoning-over-sets-using-large-language-models/" class="post-title-link" itemprop="url">ThinkSum Probabilistic reasoning over sets using large language models</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2024-05-11 14:14:21 / Modified: 16:24:00" itemprop="dateCreated datePublished" datetime="2024-05-11T14:14:21+08:00">2024-05-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>大模型有高水平的类比推理能力<br><em>再现训练数据（零样本评估）或提供的上下文（少样本上下文学习）中出现的线性文本模式。</em> </p>
-<p>有点疑惑？？？这是什么意思</p>
-<p>然而，最近的研究表明，LLM在需要对多个对象或事实进行推理并进行逻辑推论序列的情况下会失败</p>
-<p>ThinkSum: Probabilistic reasoning over sets using large language models<br>摘要：大语言模型（LLMs）在高级类比推理方面具有很强的能力：在线性文本中再现训练数据中出现的模式（zero-shot评估）或在提供的上下文中出现的模式（few-shot上下文学习）。然而，最近的研究表明，即使是更高级的LLM，在需要对多个对象或事实进行推理并进行逻辑推理序列的场景中也会失败。我们提出了一种两阶段概率推理范式ThinkSum，它以结构化的方式对对象或事实集进行推理。在第一阶段（Think–关联检索），LLM对从提示或辅助模型调用中提取的一组短语进行并行查询。在第二阶段（Sum–概率推断或推理），这些查询的结果被汇总以进行最终预测。我们在LLM评估任务的BIG-bench套件中展示了ThinkSum的可能性和优势，在13个高难度任务中，ThinkSum比使用GPT-family模型的现有技术水平有所提高，通常使用的模型变体要小得多。我们还将ThinkSum与其他针对LLM直接提示的修改建议进行了比较和对比，例如思维链提示的变体。我们的研究结果表明，由于ThinkSum中的概率推理是在调用LLM之外进行的，因此ThinkSum对提示设计的敏感性较低，能够产生更多可解释的预测，并且能够灵活地与潜在变量模型相结合，从LLM中提取结构化知识。总之，我们提出的范式是增强LLM推理能力的一种有前途的方法。<br>关键词：推理增强；两阶段概率推理；检索</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -234,10 +181,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/11/LLM-for-table-reasoning/" class="post-title-link" itemprop="url">LLM for table reasoning</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          LLM for table reasoning
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -261,7 +207,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Large Language Models are Versatile Decomposers Decompose Evidence and Questions for Table-based Reasoning </p>
+        <p>Large Language Models are Versatile Decomposers Decompose Evidence and Questions for Table-based Reasoning </p>
 <h1 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h1><p>表格推理：</p>
 <p>表格推理要求结合表格和问题，表格是结构化的</p>
 <p>原有的方法不能够完成复杂的question，并且不能够大表格</p>
@@ -362,243 +308,33 @@
 </ul>
 <h1 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h1><p><img src="/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.png" alt="这是图片" title="实验结果"></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/01/A%20Survey%20of%20Table%20Reasoning%20with%20Large%20Language%20Models/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-      <meta itemprop="name" content="Hua Qiu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/01/A%20Survey%20of%20Table%20Reasoning%20with%20Large%20Language%20Models/" class="post-title-link" itemprop="url">A Survey of Table Reasoning with Large Language Models</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-05-01 19:16:46" itemprop="dateCreated datePublished" datetime="2024-05-01T19:16:46+08:00">2024-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-11 10:43:40" itemprop="dateModified" datetime="2024-05-11T10:43:40+08:00">2024-05-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="A-Survey-of-Table-Reasoning-with-Large-Language-Models"><a href="#A-Survey-of-Table-Reasoning-with-Large-Language-Models" class="headerlink" title="A Survey of Table Reasoning with Large Language Models"></a>A Survey of Table Reasoning with Large Language Models</h1><p>[v1] Tue, 13 Feb 2024 07:17:52 UTC (380 KB)</p>
-<p>Table reasoning, which aims to generate the corresponding answer to the question following the user requirement according to the provided table, and optionally a text description of the table, effectively improving the efficiency of obtaining information. Recently, using Large Language Models (LLMs) has become the mainstream method for table reasoning, because it not only significantly reduces the annotation cost but also exceeds the performance of previous methods. However, existing research still lacks a summary of LLM-based table reasoning works. Due to the existing lack of research, questions about which techniques can improve table reasoning performance in the era of LLMs, why LLMs excel at table reasoning, and how to enhance table reasoning abilities in the future, remain largely unexplored. This gap significantly limits progress in research. To answer the above questions and advance table reasoning research with LLMs, we present this survey to analyze existing research, inspiring future work. In this paper, we analyze the mainstream techniques used to improve table reasoning performance in the LLM era1, and the advantages of LLMs compared to pre-LLMs for solving table reasoning. We provide research directions from both the improvement of existing methods and the expansion of practical applications to inspire future research.</p>
-<p>表格推理，旨在根据提供的表格，以及可选的表格的文字描述，根据用户需求生成对应问题的答案，有效提高获取信息的效率。最近，使用大型语言模型（LLM）已成为表推理的主流方法，因为它不仅显着降低了注释成本，而且超过了以前方法的性能。然而，现有研究仍缺乏对基于LLM的表推理工作的总结。由于目前研究的缺乏，LLM时代哪些技术可以提高表推理性能、LLM为什么擅长表推理以及未来如何增强表推理能力等问题仍然很大程度上没有被探索。这一差距极大地限制了研究的进展。为了回答上述问题并推进LLM的表格推理研究，我们提出这项调查来分析现有研究，启发未来的工作。在本文中，我们分析了 LLM 时代用于提高表推理性能的主流技术，以及 LLM 与 pre-LLM 相比在解决表推理方面的优势。我们从改进现有方法和扩展实际应用两个方面提供研究方向，以启发未来的研究。</p>
-<h3 id="表格推理问题介绍"><a href="#表格推理问题介绍" class="headerlink" title="表格推理问题介绍"></a>表格推理问题介绍</h3><p><img src="/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/figure1.png" alt="这是图片" title="figure1"></p>
-<p>表推理的研究阶段</p>
-<p>rule-based, neural network-based, and pretrained language model-based [Jin et al., 2022], which we call the pre-LLM era. Recent research [Zhao et al., 2023b] has shown that Large Language Models (LLMs) exhibit compelling performance across NLP tasks, in particular, dramatically reducing annotation requirements, which we call the LLM era.</p>
-<p>rule-based -&gt; neural network-based -&gt;  pretrained language model-based  -&gt;LLM era</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A[&quot;rule-based &quot;] --&gt; B[&quot;neural network-based&quot;] --&gt;C[&quot;pretrained language&quot;] --&gt; D[&#x27;LLM era&#x27;]</span><br></pre></td></tr></table></figure>
+        
 
 
-<p>本文关注点</p>
-<ol>
-<li><p>What techniques can improve table reasoning performance in the LLM era; 2. Why LLMs excel at table reasoning; 3. How to enhance table reasoning ability in the future.</p>
-</li>
-<li><p>LLM时代有哪些技术可以提高表格推理性能； 2. 为什么LLM擅长表格推理； 3、以后如何增强表格推理能力。</p>
-</li>
-</ol>
-<p>表推理技术</p>
-<p><img src="/images/%E8%A1%A8%E6%A0%BC%E6%8E%A8%E7%90%86%E5%9B%BE%E5%83%8F/figure2.png" alt="这是图片" title="figure2"></p>
-<p>关于第一个主题，为了更好地适应LLM时代的表推理研究，我们在§3中介绍了LLM时代表推理的主流技术和详细方法。具体来说，我们根据现有作品所使用的不同技术对它们进行分类，并分别对其进行详细介绍。</p>
-<p>考虑第二个主题，我们探讨了为什么LLM在第 4 节中的表格推理任务中表现出优异的性能。我们比较了 pre-LLM 和 LLM 在不同基准上的最佳表现，并证明 LLM 在表推理任务中始终优于 pre-LLM。然后，我们基于该任务的两个固有挑战，讨论了法学硕士在解决表推理任务方面的优势。</p>
-<p>关于第三个主题，我们在第 5 节中讨论了表格推理的潜在未来方向。为了促进表推理研究，更好地将表推理应用于现实场景，我们分别分析如何进一步提高表推理性能并探索如何将表推理应用于实际应用。</p>
-<h2 id="Benchmarks"><a href="#Benchmarks" class="headerlink" title="Benchmarks"></a>Benchmarks</h2><p>related resources in</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> zhxlia&#x2F;Awesome-TableReasoning-LLM-Survey</p>
-<p>表 QA：表 QA 任务是根据表回答问题 [Pasupat 和 Liang，2015]。 WikiTableQuestions [Pasupat 和 Liang，2015] 充当表 QA 任务的初始基准，该任务具有开放域表并伴有复杂的问题。 </p>
-<p> 表事实验证：表事实验证任务旨在根据证据表验证文本假设是否成立或反驳[Chen et al., 2020]。 TabFact [Chen et al., 2020]作为表事实验证任务中的第一个基准，具有大规模跨域表数据和复杂推理要求的特点。 </p>
-<p> 表到文本：表到文本任务是通过表格生成与给定问题相对应的自然语言描述[Nan et al., 2022]。与仅生成多个跨度的表格 QA 任务不同，表格到文本要求答案为一段。 FeTaQA [Nan et al., 2022] 要求模型利用大规模、高质量的数据生成问题的自由格式答案。 </p>
-<p> 文本到SQL：文本到SQL 旨在将数据库下的文本问题转换为可执行的结构化查询语言(SQL)。 Spider [Yu et al., 2018] 是第一个针对文本到 SQL 任务的多域、多表基准测试。</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/05/01/A%20Survey%20of%20Table%20Reasoning%20with%20Large%20Language%20Models/" rel="prev" title="A Survey of Table Reasoning with Large Language Models">
+      <i class="fa fa-chevron-left"></i> A Survey of Table Reasoning with Large Language Models
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/05/11/ThinkSum-Probabilistic-reasoning-over-sets-using-large-language-models/" rel="next" title="ThinkSum Probabilistic reasoning over sets using large language models">
+      ThinkSum Probabilistic reasoning over sets using large language models <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/30/fisrt-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-      <meta itemprop="name" content="Hua Qiu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/30/fisrt-blog/" class="post-title-link" itemprop="url">fisrt blog</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2024-04-30 20:40:23 / Modified: 22:16:59" itemprop="dateCreated datePublished" datetime="2024-04-30T20:40:23+08:00">2024-04-30</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>你好呀</p>
-<p>这样吗‘</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-      <meta itemprop="name" content="Hua Qiu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/27/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-04-27 23:02:03" itemprop="dateCreated datePublished" datetime="2024-04-27T23:02:03+08:00">2024-04-27</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -651,6 +387,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%91%98%E8%A6%81%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">摘要：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E4%B8%BB%E8%A6%81%E8%B4%A1%E7%8C%AE"><span class="nav-number">3.</span> <span class="nav-text">本文主要贡献</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%B7%A5%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">相关工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%8E%A8%E7%90%86"><span class="nav-number">4.1.</span> <span class="nav-text">表推理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86"><span class="nav-number">4.2.</span> <span class="nav-text">大语言模型推理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E8%A7%A3"><span class="nav-number">4.3.</span> <span class="nav-text">问题分解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A1%A8%E8%BF%B0%E5%92%8C%E7%AC%A6%E5%8F%B7"><span class="nav-number">5.</span> <span class="nav-text">问题表述和符号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E6%9C%AC%E6%96%87%E4%B8%AD%EF%BC%8C%E6%88%91%E4%BB%AC%E9%87%8D%E7%82%B9%E5%85%B3%E6%B3%A8%E4%B8%A4%E4%B8%AA%E5%9F%BA%E4%BA%8E%E8%A1%A8%E7%9A%84%E6%8E%A8%E7%90%86%E4%BB%BB%E5%8A%A1%EF%BC%8C%E5%8C%85%E6%8B%AC%E5%9F%BA%E4%BA%8E%E8%A1%A8%E7%9A%84%E4%BA%8B%E5%AE%9E%E9%AA%8C%E8%AF%81%EF%BC%88FV%EF%BC%89%E5%92%8C%E5%9F%BA%E4%BA%8E%E8%A1%A8%E7%9A%84%E9%97%AE%E7%AD%94%EF%BC%88QA%EF%BC%89%E3%80%82"><span class="nav-number">5.1.</span> <span class="nav-text">在本文中，我们重点关注两个基于表的推理任务，包括基于表的事实验证（FV）和基于表的问答（QA）。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Method"><span class="nav-number">6.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%B8%8A%E4%B8%8B%E6%96%87%E5%AD%A6%E4%B9%A0"><span class="nav-number">6.1.</span> <span class="nav-text">一、上下文学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E5%88%86%E8%A7%A3"><span class="nav-number">6.2.</span> <span class="nav-text">表格分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E8%A7%A3-1"><span class="nav-number">6.3.</span> <span class="nav-text">问题分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%BB%88%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A3"><span class="nav-number">6.4.</span> <span class="nav-text">最终问题求解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C"><span class="nav-number">7.</span> <span class="nav-text">实验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%BA%BF"><span class="nav-number">7.0.1.</span> <span class="nav-text">基线</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="nav-number">8.</span> <span class="nav-text">实验结果</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
